@@ -10,49 +10,61 @@ import SwiftUI
 struct AlarmsView: View {
     var body: some View {
         NavigationStack{
-            
-            VStack{
-                
-                
-                Image(systemName: "bed.double.fill")
-                    .foregroundStyle(Color.white)
-                
 
+            VStack(alignment: .leading) {
                 
                 HStack{
-                    //Left side
-                    Text("7:30")
-                        .font(.system(size: 64.0,weight: .thin,design: .default))
-                    Text("AM")
-                        .font(.system(.largeTitle,design: .default,weight: .thin))
-                    Spacer()
-                    
-                    //Right side
-                    Toggle("",isOn: Binding.constant(true))
+                    Image(systemName: "bed.double.fill")
+                        .foregroundStyle(Color.white)
+                    Text("Sleep | Wake Up")
                 }
                 
-                
+    
                 HStack{
-                    //Left side
-                    Text("8:15")
-                        .font(.system(size: 64.0,weight: .thin,design: .default))
-                    Text("AM")
-                        .font(.system(.largeTitle,design: .default,weight: .thin))
-                    Spacer()
-                    
-                    //Right side
-                    Toggle("",isOn: Binding.constant(true))
-                    
+                    Text("No Alarm")
+                        .foregroundStyle(.gray)
                 }
-               
                 
                 Spacer()
+                
+                
+                AlarmTime(time: "9:00", amOrPm: "PM")
+                AlarmTime(time: "8:00", amOrPm: "PM")
+                AlarmTime(time: "9:00", amOrPm: "PM")
+                AlarmTime(time: "9:00", amOrPm: "PM")
+
+                
+                
+                Spacer()
+                
+                    
             }
             .navigationTitle("Alarms")
+        
+        }
+    }
+}
+#Preview {
+    LandingView()
+}
+
+struct AlarmTime: View {
+    //MARK:Stored properties
+    let time:String
+    let amOrPm:String
+    
+    var body: some View {
+        return HStack{
+            //Left side
+            Text(time)
+                .font(.system(size:64.0,weight: .thin,design: .default))
+            Text (amOrPm )
+                .font(.system(.largeTitle, design: .default, weight: .thin))
+            Spacer()
+            
+            //Right side
+            Toggle("",isOn: Binding.constant(true))
         }
     }
 }
 
-#Preview {
-    LandingView()
-}
