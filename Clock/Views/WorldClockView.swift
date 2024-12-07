@@ -19,6 +19,10 @@ struct WorldClockView: View {
                 CityView(timeZoneOffset:"+6", city: "Hamburg", time: "12:35", amOrPm: "PM")
                 //Sydney
                 CityView(timeZoneOffset: "+16", city: "Sydney", time: "10:35", amOrPm: "PM")
+                //Dubai
+                CityView(timeZoneOffset:"+9", city: "Dubai", time: "3:35", amOrPm: "PM")
+                //Mexico City
+                CityView(timeZoneOffset:"-1", city: "Mexico City", time: "5:35", amOrPm: "AM")
             }
             
                 

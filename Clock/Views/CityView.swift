@@ -17,9 +17,9 @@ struct CityView: View {
     let amOrPm: String
     
     var body: some View {
-        HStack {
+        HStack (alignment: .bottom){
             // Left side
-            VStack{
+            VStack(alignment: .leading){
                 Text ("Today,\(timeZoneOffset)HRS")
                 Text (city)
                     .font(.system(.largeTitle, design: .default, weight: .thin))
@@ -29,9 +29,14 @@ struct CityView: View {
             // Right side
             Text (time)
                 .font(.system(size:64.0,weight: .thin,design: .default))
+                
             Text (amOrPm )
                 .font(.system(.largeTitle, design: .default, weight: .thin))
             
         }
     }
+}
+
+#Preview {
+    
 }

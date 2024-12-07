@@ -10,22 +10,45 @@ import SwiftUI
 struct AlarmsView: View {
     var body: some View {
         NavigationStack{
-        VStack{
-            HStack{
-                //Left side
-                Text("7:30")
-                    .font(.system(size: 64.0,weight: .thin,design: .default))
-                Text("AM")
-                    .font(.system(.largeTitle,design: .default,weight: .thin))
+            
+            VStack{
+                
+                
+                Image(systemName: "bed.double.fill")
+                    .foregroundStyle(Color.white)
+                
+
+                
+                HStack{
+                    //Left side
+                    Text("7:30")
+                        .font(.system(size: 64.0,weight: .thin,design: .default))
+                    Text("AM")
+                        .font(.system(.largeTitle,design: .default,weight: .thin))
+                    Spacer()
+                    
+                    //Right side
+                    Toggle("",isOn: Binding.constant(true))
+                }
+                
+                
+                HStack{
+                    //Left side
+                    Text("8:15")
+                        .font(.system(size: 64.0,weight: .thin,design: .default))
+                    Text("AM")
+                        .font(.system(.largeTitle,design: .default,weight: .thin))
+                    Spacer()
+                    
+                    //Right side
+                    Toggle("",isOn: Binding.constant(true))
+                    
+                }
+               
+                
                 Spacer()
-                
-                //Right side
-                Toggle("",isOn: Binding.constant(true))
-                
             }
-            .padding()
-        }
-        .navigationTitle("Alarms")
+            .navigationTitle("Alarms")
         }
     }
 }
