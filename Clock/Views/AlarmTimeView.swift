@@ -24,6 +24,7 @@ struct AlarmTimeView: View {
             
             //Right side
             Toggle("",isOn: Binding.constant(true))
+            
         }
     }
 }
