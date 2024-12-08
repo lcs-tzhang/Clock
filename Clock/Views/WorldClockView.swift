@@ -13,14 +13,19 @@ struct WorldClockView: View {
             VStack{
                 // Ottawa
                 CityView(timeZoneOffset: "+0", city: "Ottawa", time: "6:35", amOrPm: "AM")
+                    Spacer()
                 // Vancouver
                 CityView(timeZoneOffset: "-3", city: "Vancouver", time: "3:35", amOrPm: "AM")
+                    Spacer()
                 //Hamburg
                 CityView(timeZoneOffset:"+6", city: "Hamburg", time: "12:35", amOrPm: "PM")
+                   Spacer()
                 //Sydney
                 CityView(timeZoneOffset: "+16", city: "Sydney", time: "10:35", amOrPm: "PM")
+                   Spacer()
                 //Dubai
                 CityView(timeZoneOffset:"+9", city: "Dubai", time: "3:35", amOrPm: "PM")
+                   Spacer()
                 //Mexico City
                 CityView(timeZoneOffset:"-1", city: "Mexico City", time: "5:35", amOrPm: "AM")
             }
@@ -37,7 +42,7 @@ struct WorldClockView: View {
                         
                     }
                     
-                    ToolbarItem(placement: .topBarLeading) {
+                    ToolbarItem(placement: .primaryAction) {
                         
                         Button{
                             // Does nothing right now
